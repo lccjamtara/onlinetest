@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lakhotiya Computer Center | Online Tests</title>
+  <title>Online Test</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    html, body {
+      height: 100%;
       margin: 0;
-      background: #f4f6f9;
+      display: flex;
+      flex-direction: column;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9fbfd;
       color: #333;
     }
     header {
@@ -16,88 +21,77 @@
       color: #fff;
       padding: 20px;
       text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     }
     main {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 10px;
-    }
-    .test-card {
-      background: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .test-card h2 {
-      color: #003366;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-    .set-list {
+      flex: 1;
+      width: 100%;
+      margin: 0;
+      padding: 20px 0;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      align-items: center;
     }
-    .set-list a {
-      background: #0073e6;
-      color: #fff;
-      padding: 10px;
+    h2 {
       text-align: center;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
+      color: #003366;
+      margin: 15px 0;
     }
-    .set-list a:hover {
-      background: #005bb5;
+    iframe {
+      width: 80%;
+      max-width: 1000px;
+      height: 80vh; 
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin: 15px 0;
+      text-decoration: none;
+      color: #0073e6;
+      font-weight: 500;
+    }
+    .back-link:hover {
+      color: #005bb5;
     }
     footer {
+      margin-top: auto;
+      padding: 15px;
       text-align: center;
       background: #003366;
       color: #fff;
-      padding: 10px;
-      margin-top: 20px;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Lakhotiya Computer Center</h1>
-    <p>Online Test Portal</p>
+    <p>Online Test</p>
   </header>
 
   <main>
-    <h2>Available Tests</h2>
-
-    <!-- C++ Test -->
-    <div class="test-card">
-      <h2>C++ Test</h2>
-      <div class="set-list">
-        <a href="test.html?title=C++%20Set%201&link=https://forms.gle/TUE32KzqDALJq4cs5" target="_blank">Set 1</a>
-        <a href="test.html?title=C++%20Set%202&link=https://forms.gle/8JAFPpMcy57x5PH28" target="_blank">Set 2</a>
-        <a href="test.html?title=C++%20Set%203&link=https://forms.gle/uNduVguYn4D3KcEx5" target="_blank">Set 3</a>
-      </div>
-    </div>
-
-    <!-- Java Test -->
-    <div class="test-card">
-      <h2>Java Test</h2>
-      <div class="set-list">
-        <a href="#">Coming Soon</a>
-      </div>
-    </div>
-
-    <!-- Python Test -->
-    <div class="test-card">
-      <h2>Python Test</h2>
-      <div class="set-list">
-        <a href="#">Coming Soon</a>
-      </div>
-    </div>
+    <a href="index.html" class="back-link">← Back to Test List</a>
+    <h2 id="test-title">Loading...</h2>
+    
+    <!-- ✅ Paste your Google Form embed link here -->
+    <iframe id="test-iframe" src=""></iframe>
   </main>
 
   <footer>
     © 2025 Lakhotiya Computer Center | Designed for Students
   </footer>
+
+  <script>
+    // Read query parameters from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const title = urlParams.get('title');
+    const link = urlParams.get('link');
+
+    if (title) document.getElementById('test-title').innerText = title;
+    if (link) document.getElementById('test-iframe').src = decodeURIComponent(link);
+  </script>
 </body>
 </html>
