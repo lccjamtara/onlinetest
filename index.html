@@ -1,103 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lakhotiya Computer Center | Online Tests</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f6f9;
-      color: #333;
-    }
-    header {
-      background: linear-gradient(135deg, #003366, #0073e6);
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    main {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 10px;
-    }
-    .test-card {
-      background: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .test-card h2 {
-      color: #003366;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-    .set-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .set-list a {
-      background: #0073e6;
-      color: #fff;
-      padding: 10px;
-      text-align: center;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .set-list a:hover {
-      background: #005bb5;
-    }
-    footer {
-      text-align: center;
-      background: #003366;
-      color: #fff;
-      padding: 10px;
-      margin-top: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCC Online Tests</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Lakhotiya Computer Center</h1>
-    <p>Online Test Portal</p>
-  </header>
 
-  <main>
-    <h2>Available Tests</h2>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <h1>Lakhotia Computer Center</h1>
+            <p>Online Tests Portal</p>
+        </div>
+    </header>
 
-    <!-- C++ Test -->
-    <div class="test-card">
-      <h2>C++ Test</h2>
-      <div class="set-list">
-        <a href="test.html?title=C++%20Set%201&link=https://forms.gle/TUE32KzqDALJq4cs5" target="_blank">Set 1</a>
-        <a href="test.html?title=C++%20Set%202&link=https://forms.gle/8JAFPpMcy57x5PH28" target="_blank">Set 2</a>
-        <a href="test.html?title=C++%20Set%203&link=https://forms.gle/uNduVguYn4D3KcEx5" target="_blank">Set 3</a>
-      </div>
-    </div>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <h2>Welcome to Our Online Test Platform</h2>
+            <p>Choose a test below and start your journey. Results will be stored securely by the institute.</p>
+        </div>
+    </section>
 
-    <!-- Java Test -->
-    <div class="test-card">
-      <h2>Java Test</h2>
-      <div class="set-list">
-        <a href="#">Coming Soon</a>
-      </div>
-    </div>
+    <!-- TEST SECTIONS -->
+    <section class="tests">
+        <div class="container">
 
-    <!-- Python Test -->
-    <div class="test-card">
-      <h2>Python Test</h2>
-      <div class="set-list">
-        <a href="#">Coming Soon</a>
-      </div>
-    </div>
-  </main>
+            <div class="test-card">
+                <h3>C++ Test</h3>
+                <p>Test your knowledge in C++. 20 questions, 45 minutes.</p>
+                <a href="https://forms.gle/yourformlink1" target="_blank" class="btn">Start Test</a>
+            </div>
 
-  <footer>
-    © 2025 Lakhotiya Computer Center | Designed for Students
-  </footer>
+            <div class="test-card">
+                <h3>MS Office Test</h3>
+                <p>Excel, Word, Access and Powerpoint. 25 questions, 20 minutes.</p>
+                <a href="https://forms.gle/yourformlink2" target="_blank" class="btn">Start Test</a>
+            </div>
+
+            <div class="test-card">
+                <h3>Operating System Test</h3>
+                <p>Check your awareness about OS.</p>
+                <a href="https://forms.gle/yourformlink3" target="_blank" class="btn">Start Test</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Lakhotia Computer Center | Designed with ❤️ for students <br>Designed By Jagannath</p>
+    </footer>
+
 </body>
 </html>
